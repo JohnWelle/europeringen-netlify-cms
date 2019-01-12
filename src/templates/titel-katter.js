@@ -21,9 +21,19 @@ export const TitelKatterTemplate = ({ title, titelkatter, content, contentCompon
               <PageContent className="content" content={content} />
               {titelkatter.map((cat, i) => {
                 <div key={i}>
-                  <h3>{cat.namn}</h3>
                   <p>{cat.beskrivning}</p>
-                  <div
+                  <h2
+                      className="has-text-weight-bold is-size-1"
+                      style={{
+                        boxShadow: '0.5rem 0 0 #f40, -0.5rem 0 0 #f40',
+                        backgroundColor: '#f40',
+                        color: 'white',
+                        padding: '1rem',
+                      }}
+                    >
+                      {cat.namn}
+                  </h2>
+                  {/* <div
                     className="full-width-image-container margin-top-0"
                     style={{
                       backgroundImage: `url(${
@@ -44,7 +54,7 @@ export const TitelKatterTemplate = ({ title, titelkatter, content, contentCompon
                     >
                       {cat.namn}
                     </h2>
-                  </div>
+                  </div> */}
 
                 </div>
               })}
