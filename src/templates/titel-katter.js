@@ -23,7 +23,29 @@ export const TitelKatterTemplate = ({ title, titelkatter, content, contentCompon
                 <div key={i}>
                   <h3>{cat.namn}</h3>
                   <p>{cat.beskrivning}</p>
-                  <img src={cat.bild} />
+                  <div
+                    className="full-width-image-container margin-top-0"
+                    style={{
+                      backgroundImage: `url(${
+                        !!cat.bild.childImageSharp
+                          ? cat.bild.childImageSharp.fluid.src
+                          : cat.bild
+                      })`,
+                    }}
+                  >
+                    <h2
+                      className="has-text-weight-bold is-size-1"
+                      style={{
+                        boxShadow: '0.5rem 0 0 #f40, -0.5rem 0 0 #f40',
+                        backgroundColor: '#f40',
+                        color: 'white',
+                        padding: '1rem',
+                      }}
+                    >
+                      {cat.namn}
+                    </h2>
+                  </div>
+
                 </div>
               })}
             </div>
