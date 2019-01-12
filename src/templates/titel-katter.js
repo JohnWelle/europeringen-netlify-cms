@@ -4,7 +4,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 
-export const TitelKatterTemplate = ({ title, intro, titelkatter, content, contentComponent }) => {
+export const TitelKatterTemplate = ({ title, introduktion, titelkatter, content, contentComponent }) => {
   const PageContent = contentComponent || Content
 
   return (
@@ -16,7 +16,7 @@ export const TitelKatterTemplate = ({ title, intro, titelkatter, content, conten
               <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
                 {title}
               </h2>
-              <p>{intro}</p>
+              <p>{introduktion}</p>
               <PageContent className="content" content={content} />
               {titelkatter.map((cat, i) => {
                 <div key={i}>
@@ -75,7 +75,7 @@ export const titelKatterQuery = graphql`
           beskrivning
           bild {
             childImageSharp {
-              fluid(maxWidth: 2048, quality: 100) {
+              fluid(maxWidth: 500, quality: 100) {
                 ...GatsbyImageSharpFluid
               }
             }
