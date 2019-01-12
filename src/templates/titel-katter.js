@@ -4,7 +4,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 
-export const TitelKatterTemplate = ({ title, introduktion, titelkatter, content, contentComponent }) => {
+export const TitelKatterTemplate = ({ title, titelkatter, content, contentComponent }) => {
   const PageContent = contentComponent || Content
 
   return (
@@ -35,7 +35,6 @@ export const TitelKatterTemplate = ({ title, introduktion, titelkatter, content,
 
 TitelKatterTemplate.propTypes = {
   title: PropTypes.string.isRequired,
-  intro: PropTypes.string.isRequired,
   titelkatter: PropTypes.array.isRequired,
   content: PropTypes.string,
   contentComponent: PropTypes.func,
@@ -49,7 +48,6 @@ const TitelKatter = ({ data }) => {
       <TitelKatterTemplate
         contentComponent={HTMLContent}
         title={post.frontmatter.title}
-        intro={post.frontmatter.intro}
         titelkatter={post.frontmatter.titelkatter}
         content={post.html}
       />
@@ -69,7 +67,6 @@ export const titelKatterQuery = graphql`
       html
       frontmatter {
         title
-        introduktion
         titelkatter {
           namn
           beskrivning

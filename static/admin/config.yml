@@ -35,7 +35,7 @@ collections:
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "titel-katter"}
           - {label: Title, name: title, widget: string}
-          - {label: Intro, name: introduktion, widget: string}
+          - {label: Body, name: body, widget: markdown}
           - label: Titelkatter
             name: titelkatter
             widget: list

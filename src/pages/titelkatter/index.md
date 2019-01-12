@@ -1,7 +1,6 @@
 ---
 templateKey: titel-katter
 title: Titelkatter
-introduktion: Her kan du se fina titelkatter
 titelkatter:
   - beskrivning: Fin
     bild: /img/haj.jpg
@@ -10,4 +9,4 @@ titelkatter:
     bild: /img/img_0612.jpg
     namn: Bjarne
 ---
-
+Her kan vi ha lite generell beskrivning av vad titelkatter är och vad de är bra för.
