@@ -1,19 +1,19 @@
 ---
-templateKey: 'about-page'
-path: /about
-title: About our values
+templateKey: about-page
+title: Om Européringen
 ---
-### Shade-grown coffee
-Coffee is a small tree or shrub that grows in the forest understory in its wild form, and traditionally was grown commercially under other trees that provided shade. The forest-like structure of shade coffee farms provides habitat for a great number of migratory and resident species.
+Européringen är Sveriges äldsta rasring. Den bildades av ett antal entusiaster som samlades våren 1967 i Surahammar. Ursprungligen var det en förening både för Europe- och Manxintresserade medlemmar och namnet var då Nordiska Manx- och Europeringen (NMER). Men över tiden svalnade intresset inom ringen för Manxkatten och på 90-talet bestämdes att ringen skulle byta namn och uteslutande ägna sig åt Europén.
 
-### Single origin
-Single-origin coffee is coffee grown within a single known geographic origin. Sometimes, this is a single farm or a specific collection of beans from a single country. The name of the coffee is then usually the place it was grown to whatever degree available.
+När ringen bildades var den unik inte bara i sin egenskap av första och länge enda rasring. Den var också pan-Nordisk och oberoende från existerande riksorganisationer. Medlemmarna som var organiserade både i FIFe-anslutna organisationer såväl som independent, kom således både från Sverige och våra grannländer.
 
-### Sustainable farming
-Sustainable agriculture is farming in sustainable ways based on an understanding of ecosystem services, the study of relationships between organisms and their environment. What grows where and how it is grown are a matter of choice and careful consideration for nature and communities.
+### Så här började det
 
-### Direct sourcing
-Direct trade is a form of sourcing practiced by some coffee roasters. Advocates of direct trade practices promote direct communication and price negotiation between buyer and farmer, along with systems that encourage and incentivize quality.
+1967 samlades ett antal entusiastiska Europé- och Manxägare från Sverige och Norge i Surahammar. Man bestämde sig för att starta upp något nytt inom kattsporten. En sammanslutning som inte var en kattklubb i traditionell bemärkelse utan "intressecirkel" för alla som värnade om raserna Manx och Europé. Den första rasringen i Norden var därmed född. Ursprungligen krävdes för medlemskap i ringen att man redan tillhörde någon nordisk FIFe-ansluten kattklubb. Så småningom ändrades detta och ringen är numera öppen för alla, oavsett om man tillhör en FIFe-ansluten klubb eller en Independentklubb. Det främsta syftet med ringen var från början att upprätta ett nordisk register över medlemmarnas katter för att på så sätt främja avelsarbetet.
 
-### Reinvest profits
-We want to truly empower the communities that bring amazing coffee to you. That’s why we reinvest 20% of our profits into farms, local businesses and schools everywhere our coffee is grown. You can see the communities grow and learn more about coffee farming on our blog.
+### Vår verksamhet idag
+
+Verksamheten i dag består av vår tidning Europén som utkommer med fyra nummer per år. En hemsida som uppdateras regelbundet. Ett forum för föreningens medlemmar. En européspecial hålls varje år i samband med en annan utställning. Ett eller flera seminarium om hälsa och avel planeras under året. Plus en massa annat...
+
+### Vår målsättning
+
+Européringens målsättning är först och främst att bevara europén som den kultur"s"katt den verkligen är. Att få folk att förstå vilken underbar ras det är och att den är lika exotisk som vilken annan ras som helst. Att bevara dess utseende och temperament kan bara ske med ett omsorgsfullt avelsarbete och att alla europé uppfödare samarbetar för att vi ska få ett så stort avelsutbud som möjligt. Vår målsättning är även att höja alla katters status. Att vi dessutom känner varandra, stöttar varandra och har kul ihop är också ett mål.
