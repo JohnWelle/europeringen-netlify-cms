@@ -40,7 +40,7 @@ collections:
             name: titelkatter
             widget: list
             fields:
-              - {label: Namn, name: name, widget: string}
+              - {label: Namn, name: namn, widget: string}
               - {label: Beskrivning, name: beskrivning, widget: string}
               - {label: Bild, name: bild, widget: image}
       - file: "src/pages/products/index.md"

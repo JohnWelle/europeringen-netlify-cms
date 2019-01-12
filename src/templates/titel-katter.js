@@ -20,7 +20,7 @@ export const TitelKatterTemplate = ({ title, introduktion, titelkatter, content,
               <PageContent className="content" content={content} />
               {titelkatter.map((cat, i) => {
                 <div key={i}>
-                  <h3>{cat.name}</h3>
+                  <h3>{cat.namn}</h3>
                   <p>{cat.beskrivning}</p>
                   <img src={cat.bild} />
                 </div>
