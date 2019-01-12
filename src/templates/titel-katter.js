@@ -21,8 +21,8 @@ export const TitelKatterTemplate = ({ title, intro, titelkatter, content, conten
               {titelkatter.map((cat, i) => {
                 <div key={i}>
                   <h3>{cat.name}</h3>
-                  <p>{cat.description}</p>
-                  <img src={cat.img} />
+                  <p>{cat.beskrivning}</p>
+                  <img src={cat.bild} />
                 </div>
               })}
             </div>
@@ -69,8 +69,18 @@ export const titelKatterQuery = graphql`
       html
       frontmatter {
         title
-        intro
-        titelkatter
+        introduktion
+        titelkatter {
+          namn
+          beskrivning
+          bild {
+            childImageSharp {
+              fluid(maxWidth: 2048, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
       }
     }
   }
