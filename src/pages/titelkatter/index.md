@@ -5,9 +5,9 @@ introduktion: Her kan du se fina titelkatter
 titelkatter:
   - beskrivning: Fin
     bild: /img/haj.jpg
-    name: Kåre
+    namn: Kåre
   - beskrivning: Lite ful
     bild: /img/img_0612.jpg
-    name: Bjarne
+    namn: Bjarne
 ---
 
