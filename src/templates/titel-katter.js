@@ -16,7 +16,6 @@ export const TitelKatterTemplate = ({ title, titelkatter, content, contentCompon
               <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
                 {title}
               </h2>
-              <p>{introduktion}</p>
               <PageContent className="content" content={content} />
               {titelkatter.map((cat, i) => {
                 <div key={i}>
