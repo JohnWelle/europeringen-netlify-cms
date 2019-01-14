@@ -8,7 +8,6 @@ export const TitelKatterTemplate = ({ title, titelkatter, content, contentCompon
   const PageContent = contentComponent || Content
 
   const renderCats = (cats) => {
-    console.log(cats)
     return cats.map((cat, i) => (
       <div key={i}>
         <p>{cat.beskrivning}</p>
@@ -59,7 +58,7 @@ export const TitelKatterTemplate = ({ title, titelkatter, content, contentCompon
 
 TitelKatterTemplate.propTypes = {
   title: PropTypes.string.isRequired,
-  titelkatter: PropTypes.array.isRequired,
+  titelkatter: PropTypes.array,
   content: PropTypes.string,
   contentComponent: PropTypes.func,
 }
@@ -80,7 +79,12 @@ const TitelKatter = ({ data }) => {
 }
 
 TitelKatter.propTypes = {
-  data: PropTypes.object.isRequired,
+  data: PropTypes.shape({
+    html: PropTypes.object,
+    markdownRemark: PropTypes.shape({
+      frontmatter: PropTypes.object,
+    }),
+  }),
 }
 
 export default TitelKatter
