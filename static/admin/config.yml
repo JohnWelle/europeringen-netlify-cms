@@ -18,7 +18,24 @@ collections:
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "list"}
-
+  - name: "cats"
+    label: "Katter"
+    folder: "src/pages/cats"
+    create: true
+    slug: "cat-{{slug}}"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "cat"}
+      - {label: "Name", name: "title", widget: "string"}
+      - {label: "Born", name: "born", widget: "datetime"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Tags", name: "tags", widget: "list"}
+      - label: "Bilder"
+        name: "bilder"
+        widget: "list"
+        fields:
+          - {label: "Beskrivning", name: "beskrivning", widget: "string"}
+          - {label: "Bild", name: "bild", widget: "image"}
+          - {label: "Titelkatt", name: "titelkatt", widget: "boolean"}
   - name: "pages"
     label: "Pages"
     files:
