@@ -1,7 +1,8 @@
 ---
 templateKey: index-page
 title: Européringen
-image: 'https://res.cloudinary.com/dh0fuolka/image/upload/v1547988976/puck_1-web.png'
+image: >-
+  https://res.cloudinary.com/dh0fuolka/image/upload/e_gradient_fade:20/silverblommans-choklad-puck-dec-2018.jpg
 ---
 Lorem ipsum dolor amet air plant fingerstache literally jean shorts raw denim squid pabst, live-edge activated charcoal forage distillery keytar hammock normcore copper mug. Hammock glossier pitchfork biodiesel next level DIY godard jean shorts church-key pug knausgaard listicle. VHS woke offal vice sriracha church-key. Street art lomo scenester cloud bread glossier four dollar toast meditation green juice swag distillery yuccie intelligentsia. Everyday carry taxidermy enamel pin fingerstache green juice af. Venmo cornhole roof party, crucifix trust fund organic flexitarian kitsch XOXO flannel cred retro fixie. Vape direct trade asymmetrical occupy flexitarian stumptown.
 
