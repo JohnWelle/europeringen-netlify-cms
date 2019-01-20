@@ -11,8 +11,8 @@ $primary: $kaldi-red
 $primary-invert: $kaldi-red-invert
 $body-color: #333
 
-.navbar .navbar-menu
-  box-shadow:none !important
+// .navbar .navbar-menu
+  // box-shadow:none !important
 
 .content .taglist
   list-style: none
@@ -47,8 +47,10 @@ $body-color: #333
   margin-top: 0 !important
 
 .about-page
-  img
-    width: 50%
-    margin: 0 auto
+  p
+    &:nth-child(1)
+      text-align: center
+      img
+        width: 50%
 
 @import "~bulma"

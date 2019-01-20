@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import europeringen_text_logga from "../img/europeringen_text_logga.png"
+// import europeringen_text_logga from "../img/europeringen_text_logga.png"
+import europeringen_logga from "../img/europeringen_logga.svg"
 
 const Navbar = class extends React.Component {
 
@@ -30,11 +31,11 @@ const Navbar = class extends React.Component {
  render() {
    return (
 
-  <nav className="navbar is-transparent is-fixed-top" role="navigation" aria-label="main-navigation">
+  <nav className="navbar is-transparent" role="navigation" aria-label="main-navigation">
     <div className="container">
       <div className="navbar-brand">
         <Link to="/" className="navbar-item" title="Logo">
-          <img src={europeringen_text_logga} alt="Européringen" style={{ width: '150px' }} />
+          <img src={europeringen_logga} alt="Européringen" style={{ width: '150px' }} />
         </Link>
         {/* Hamburger menu */}
         <div className="navbar-burger burger" data-target="navMenu">
