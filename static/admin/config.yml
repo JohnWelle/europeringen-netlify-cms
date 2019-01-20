@@ -24,24 +24,6 @@ collections:
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "list"}
-  - name: "cats"
-    label: "Katter"
-    folder: "src/pages/cats"
-    create: true
-    slug: "cat-{{slug}}"
-    fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "cat"}
-      - {label: "Name", name: "title", widget: "string"}
-      - {label: "Born", name: "born", widget: "datetime"}
-      - {label: "Description", name: "description", widget: "text"}
-      - {label: "Tags", name: "tags", widget: "list"}
-      - label: "Bilder"
-        name: "bilder"
-        widget: "list"
-        fields:
-          - {label: "Beskrivning", name: "beskrivning", widget: "string"}
-          - {label: "Bild", name: "bild", widget: "image"}
-          - {label: "Titelkatt", name: "titelkatt", widget: "boolean"}
   - name: "pages"
     label: "Pages"
     files:
@@ -52,20 +34,14 @@ collections:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
-      - file: "src/pages/titelkatter/index.md"
-        label: "Titelkatter"
-        name: "titelkatter"
+      - file: "src/pages/home/index.md"
+        label: "Européringen"
+        name: "index"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "titel-katter"}
-          - {label: Title, name: title, widget: string}
-          - {label: Body, name: body, widget: markdown}
-          - label: Titelkatter
-            name: titelkatter
-            widget: list
-            fields:
-              - {label: Namn, name: namn, widget: string}
-              - {label: Beskrivning, name: beskrivning, widget: string}
-              - {label: Bild, name: bild, widget: image}
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Image", name: "image", widget: "image"}
+          - {label: "Body", name: "body", widget: "markdown"}
       - file: "src/pages/products/index.md"
         label: "Products"
         name: "products"
