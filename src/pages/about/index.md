@@ -2,8 +2,6 @@
 templateKey: about-page
 title: Om Européringen
 ---
-![Européringen](https://res.cloudinary.com/dh0fuolka/image/upload/v1547993272/europeringen_logga.png "Européringen")
-
 Européringen är Sveriges äldsta rasring. Den bildades av ett antal entusiaster som samlades våren 1967 i Surahammar. Ursprungligen var det en förening både för Europe- och Manxintresserade medlemmar och namnet var då Nordiska Manx- och Europeringen (NMER). Men över tiden svalnade intresset inom ringen för Manxkatten och på 90-talet bestämdes att ringen skulle byta namn och uteslutande ägna sig åt Europén.
 
 När ringen bildades var den unik inte bara i sin egenskap av första och länge enda rasring. Den var också pan-Nordisk och oberoende från existerande riksorganisationer. Medlemmarna som var organiserade både i FIFe-anslutna organisationer såväl som independent, kom således både från Sverige och våra grannländer.
