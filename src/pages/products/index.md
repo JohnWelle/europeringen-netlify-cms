@@ -2,7 +2,8 @@
 templateKey: 'product-page'
 path: /products
 title: Our Coffee
-image: /img/jumbotron.jpg
+image: >-
+  https://res.cloudinary.com/dh0fuolka/image/upload/v1547988977/cardiwens-friendly-dec-2018.jpg
 heading: What we offer
 description: >-
   Kaldi is the ultimate spot for coffee lovers who want to learn about their

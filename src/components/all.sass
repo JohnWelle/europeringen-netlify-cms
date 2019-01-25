@@ -13,6 +13,84 @@ $body-color: #333
 
 // .navbar .navbar-menu
   // box-shadow:none !important
+.header
+  display: flex
+  justify-content: space-evenly
+  align-items: center
+  width: 100%
+  padding: 20px
+  text-align: center
+  div
+    width: 200px
+  p
+    font-family: 'Dancing Script'
+    font-size: 1.5em
+    color: 	#8b9dc3
+  button
+    color: #777777
+    text-transform: uppercase
+    font-size: .8em
+    letter-spacing: 2px
+  svg
+    color: 	darken(#8b9dc3, 10%)
+
+.header-separator
+  display: flex
+  justify-content: space-between
+
+  span
+    display: inline-block
+    width: 100%
+    border-top: solid rgba(0,0,0,.1px) 1px
+    position: relative
+    top: 20px
+    margin: 0 20px
+
+  p
+    font-family: 'Dancing Script'
+    font-size: 1.5em
+    color: 	#8b9dc3
+    white-space: nowrap
+
+.navbar-item
+  svg
+    position: relative
+    top: 1px
+    margin-right: 8px;
+    color: darken(#8b9dc3, 10%)
+
+@media (min-width: 1088px)
+  .navbar
+    .navbar-start
+      width: 100%
+      margin: 20px 0
+      > .navbar-item
+        border: solid #8b9dc3 1px
+        border-left: none
+        padding: 5px
+        flex-grow: 1
+        justify-content: center
+        color: #777777
+        text-transform: uppercase
+        font-size: .8em
+        letter-spacing: 2px
+        &.is-active
+          background-color: #8b9dc3 !important
+          color: #ffffff
+        &:hover
+          background-color: #8b9dc3 !important
+          color: #ffffff
+          > .navbar-link
+            background-color: #8b9dc3 !important
+            color: #ffffff
+        &:nth-child(1)
+          border-left: solid #8b9dc3 1px
+        .navbar-link
+          color: #777777
+        .navbar-dropdown
+          .navbar-item
+            font-size: .8em
+            color: #777777
 
 .content .taglist
   list-style: none
@@ -32,11 +110,11 @@ $body-color: #333
 // Helper Classes
 .full-width-image-container
   width: 100vw
-  height: 100vh
+  height: calc(100vh - 3.25rem)
   position: relative
   left: 50%
   right: 50%
-  margin: 5em -50vw
+  margin: 0 -50vw
   background-size: cover
   background-position: bottom
   display: flex
@@ -52,5 +130,9 @@ $body-color: #333
       text-align: center
       img
         width: 50%
+
+.hero-body
+  h1, h2
+    color: #ffffff
 
 @import "~bulma"

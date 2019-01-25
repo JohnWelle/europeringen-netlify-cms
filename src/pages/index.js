@@ -6,22 +6,31 @@ import { HTMLContent } from '../components/Content'
 
 export default class IndexPage extends React.Component {
   render() {
+    global.console.log(this.props)
+
     const { data } = this.props
     const { markdownRemark } = data
-    const { image } = markdownRemark.frontmatter
+    const { title, image } = markdownRemark.frontmatter
 
     return (
       <Layout>
-        <div
-          className="full-width-image-container margin-top-0"
+        <section class="hero is-fullheight full-width-image-container"
           style={{
-            backgroundImage: `url(${
-              !!image.childImageSharp
-                ? image.childImageSharp.fluid.src
-                : image
-              })`,
+            minHeight: "auto",
+            backgroundImage: `url(${image})`,
           }}
-        />
+        >
+          <div class="hero-body">
+            <div class="container">
+              <h1 class="title">
+                {title}
+              </h1>
+              <h2 class="subtitle">
+                Sveriges äldsta rasring
+              </h2>
+            </div>
+          </div>
+        </section>
         <div className="container">
           <div className="columns">
             <div className="column is-10 is-offset-1">
