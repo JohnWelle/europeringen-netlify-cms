@@ -11,28 +11,50 @@ $primary: $kaldi-red
 $primary-invert: $kaldi-red-invert
 $body-color: #333
 
+$er-green: #78c089
+
 // .navbar .navbar-menu
   // box-shadow:none !important
+*
+  box-sizing: border-box !important
+
+body
+  background: #e6f6ea
+  min-height: 100vh
+
+.page-wrapper
+  max-width: 1024px
+  margin: 0 auto
+  box-shadow: 5px 5px 15px rgba(0,0,0,.2), -5px -5px 15px rgba(0,0,0,.2)
+  background: white
+
+.section.main-section
+  padding-top: 0
+
 .header
   display: flex
-  justify-content: space-evenly
+  justify-content: space-between
   align-items: center
   width: 100%
   padding: 20px
-  text-align: center
   div
     width: 200px
+    &:nth-child(1)
+      text-align: left
+    &:nth-child(3)
+      text-align: right
   p
     font-family: 'Dancing Script'
     font-size: 1.5em
-    color: 	#8b9dc3
+    color: 	$er-green
+    margin-bottom: 8px
   button
     color: #777777
     text-transform: uppercase
     font-size: .8em
-    letter-spacing: 2px
+    letter-spacing: 1.8px
   svg
-    color: 	darken(#8b9dc3, 10%)
+    color: 	darken($er-green, 10%)
 
 .header-separator
   display: flex
@@ -49,7 +71,7 @@ $body-color: #333
   p
     font-family: 'Dancing Script'
     font-size: 1.5em
-    color: 	#8b9dc3
+    color: 	$er-green
     white-space: nowrap
 
 .navbar-item
@@ -57,15 +79,24 @@ $body-color: #333
     position: relative
     top: 1px
     margin-right: 8px;
-    color: darken(#8b9dc3, 10%)
+    color: darken($er-green, 10%)
 
 @media (min-width: 1088px)
+  .container
+    width: 100% !important
+    max-width: 100% !important
+
   .navbar
+    width: 100%
+
+    .navbar-brand, .navbar-menu
+      margin: 0 !important
+
     .navbar-start
       width: 100%
       margin: 20px 0
       > .navbar-item
-        border: solid #8b9dc3 1px
+        border: solid rgba(0,0,0,.1) 1px
         border-left: none
         padding: 5px
         flex-grow: 1
@@ -75,22 +106,45 @@ $body-color: #333
         font-size: .8em
         letter-spacing: 2px
         &.is-active
-          background-color: #8b9dc3 !important
+          background-color: $er-green !important
           color: #ffffff
         &:hover
-          background-color: #8b9dc3 !important
+          background-color: $er-green !important
           color: #ffffff
+          transition: all 100ms linear
           > .navbar-link
-            background-color: #8b9dc3 !important
+            background-color: transparent !important
             color: #ffffff
         &:nth-child(1)
-          border-left: solid #8b9dc3 1px
+          border-left: solid rgba(0,0,0,.1) 1px
         .navbar-link
           color: #777777
         .navbar-dropdown
           .navbar-item
             font-size: .8em
             color: #777777
+
+.main-hero
+  min-height: auto
+  background-size: cover
+  background-repeat: no-repeat
+  background-position-y: center
+
+  .field.has-addons.main-cta
+    justify-content: center
+    .control
+      box-shadow: 5px 5px 15px rgba(0,0,0,.2)
+    input
+      font-family: 'Dancing Script'
+    .button
+      color: #777777;
+      text-transform: uppercase;
+      font-size: .8em;
+      letter-spacing: 1.8px;
+      height: 36px
+      .cta-label
+        display: inline-block
+        margin-left: 5px
 
 .content .taglist
   list-style: none
@@ -123,13 +177,6 @@ $body-color: #333
 
 .margin-top-0
   margin-top: 0 !important
-
-.about-page
-  p
-    &:nth-child(1)
-      text-align: center
-      img
-        width: 50%
 
 .hero-body
   h1, h2
