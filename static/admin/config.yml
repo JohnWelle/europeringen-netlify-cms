@@ -33,7 +33,7 @@ collections:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "katter-till-salu"}
       - {label: "Titel", name: "title", widget: "string"}
       - {label: "Förälder", name: "parents", widget: "string"}
-      - {label: "Förväntad", name: "expected", widget: "boolean"}
+      - {label: "Förväntad", name: "expected", widget: "boolean", default: "true"}
       - {label: "Födda", name: "date", widget: "datetime"}
       - {label: "Beskrivning", name: "description", widget: "text"}
       - label: "Bilder"
