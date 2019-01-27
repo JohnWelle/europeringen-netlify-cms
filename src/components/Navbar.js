@@ -48,6 +48,7 @@ const Navbar = class extends React.Component {
           </div>
           <Link to="/">
             <img
+              alt="Européringen"
               style={{ width: '150px', height: '150px' }}
               src="https://res.cloudinary.com/dh0fuolka/image/upload/v1547993272/europeringen_logga.png"
             />
@@ -97,32 +98,26 @@ const Navbar = class extends React.Component {
                 Om Européringen
               </Link>
               <div className="navbar-item has-dropdown is-hoverable">
-                <a
-                  className="navbar-link"
-                  href="https://bulma.io/documentation/overview/start/"
-                >
+                <Link to="/" className="navbar-link">
                   Uppfödning
-                </a>
+                </Link>
                 <div className="navbar-dropdown">
-                  <a className="navbar-item" href="#">
+                  <Link to="/" className="navbar-item">
                     Uppfödare
-                  </a>
-                  <a className="navbar-item" href="#">
+                  </Link>
+                  <Link to="/" className="navbar-item">
                     Avelshanar
-                  </a>
-                  <a className="navbar-item" href="#">
+                  </Link>
+                  <Link to="/" className="navbar-item">
                     Till salu
-                  </a>
+                  </Link>
                   <hr className="navbar-divider" />
-                  <a
-                    className="navbar-item"
-                    href="https://bulma.io/documentation/elements/box/"
-                  >
+                  <Link to="/" className="navbar-item">
                     <span className="icon">
                       <FaCamera />
                     </span>
                     Bildgalleri
-                  </a>
+                  </Link>
                 </div>
               </div>
               <Link to="/contact" getProps={this.isActive}>

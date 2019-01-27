@@ -9,7 +9,7 @@ export default class IndexPage extends React.Component {
   render() {
     const { data } = this.props
     const { markdownRemark } = data
-    const { title, image } = markdownRemark.frontmatter
+    const { image } = markdownRemark.frontmatter
 
     return (
       <Layout>
@@ -27,12 +27,12 @@ export default class IndexPage extends React.Component {
                 />
               </div>
               <div className="control">
-                <a className="button">
+                <button className="button">
                   <span className="icon is-small">
                     <FaEnvelope />
                   </span>
                   <span className="cta-label">Få nyhetsbrev</span>
-                </a>
+                </button>
               </div>
             </div>
           </div>

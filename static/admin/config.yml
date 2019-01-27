@@ -24,6 +24,30 @@ collections:
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "list"}
+  - name: "katter_till_salu"
+    label: "Katter Till Salu"
+    folder: "src/pages/katter_till_salu"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "katter-till-salu"}
+      - {label: "Titel", name: "title", widget: "string"}
+      - {label: "Förälder", name: "parents", widget: "string"}
+      - {label: "Förväntad", name: "expected", widget: "boolean"}
+      - {label: "Födda", name: "date", widget: "datetime"}
+      - {label: "Beskrivning", name: "description", widget: "text"}
+      - label: "Bilder"
+        name: "katter-till-salu-bilder"
+        widget: "list"
+        field: {label: "Bild", name: "image", widget: "image"}
+      - label: "Uppfödare"
+        name: "breeder"
+        widget: "object"
+        fields:
+          - {label: "Namn", name: "name", widget: "string"}
+          - {label: "Telefon", name: "phone", widget: "string"}
+          - {label: "Epost", name: "email", widget: "string"}
+          - {label: "Hemsida", name: "homepage", widget: "string"}
   - name: "pages"
     label: "Pages"
     files:
