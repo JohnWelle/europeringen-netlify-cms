@@ -37,7 +37,7 @@ collections:
       - {label: Födda, name: date, widget: datetime}
       - {label: Beskrivning, name: description, widget: text}
       - label: Bilder
-        name: katter-till-salu-bilder
+        name: tillSaluBilder
         widget: list
         field: {label: Bild, name: image, widget: image, media_library: { output_filename_only: true }}
       - label: Uppfödare
