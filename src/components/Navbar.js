@@ -35,7 +35,7 @@ const Navbar = class extends React.Component {
 
   render() {
     return (
-      <div clasName="navbar-wrapper">
+      <div className="navbar-wrapper">
         <div className="header is-hidden-mobile">
           <div>
             <p>Gå med i Européringen</p>

@@ -4,12 +4,20 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import { FaEnvelope } from 'react-icons/fa'
 import { HTMLContent } from '../components/Content'
+import SectionHeader from '../components/SectionHeader'
+import CatForSaleCard from '../components/CatForSaleCard'
 
 export default class IndexPage extends React.Component {
   render() {
     const { data } = this.props
-    const { markdownRemark } = data
+    const { allMarkdownRemark, markdownRemark } = data
     const { image } = markdownRemark.frontmatter
+
+    const catsForSale = allMarkdownRemark.edges.map(
+      item => item.node.frontmatter
+    )
+
+    global.console.log(catsForSale)
 
     return (
       <Layout>
@@ -38,6 +46,14 @@ export default class IndexPage extends React.Component {
           </div>
         </section>
         <div className="container">
+          <SectionHeader title="Katter Til Salu" />
+          <div className="columns">
+            {catsForSale.map((item, i) => (
+              <div key={i} className="column">
+                <CatForSaleCard key={i} {...item} />
+              </div>
+            ))}
+          </div>
           <div className="columns">
             <div className="column is-10 is-offset-1">
               <div className="section">
@@ -58,6 +74,9 @@ IndexPage.propTypes = {
   data: PropTypes.object.isRequired,
 }
 
+// TODO: Implement aliases when implementing multiple allMarkdownRemark
+// queries.
+// https://www.gatsbyjs.org/docs/graphql-reference/#aliasing
 export const pageQuery = graphql`
   query PageQuery {
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
@@ -65,6 +84,32 @@ export const pageQuery = graphql`
       frontmatter {
         title
         image
+      }
+    }
+    allMarkdownRemark(
+      limit: 3
+      sort: { order: DESC, fields: [frontmatter___date] }
+      filter: { frontmatter: { templateKey: { eq: "katter-till-salu" } } }
+    ) {
+      edges {
+        node {
+          id
+          frontmatter {
+            date(formatString: "MMMM DD, YYYY")
+            title
+            expected
+            parents
+            description
+            tillSaluBilder
+            breeder {
+              name
+              phone
+              email
+              homepage
+              logo
+            }
+          }
+        }
       }
     }
   }
