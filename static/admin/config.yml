@@ -12,65 +12,65 @@ media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: "blog"
-    label: "Blog"
-    folder: "src/pages/blog"
+  - name: blog
+    label: Blog
+    folder: src/pages/blog
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: {{year}}-{{month}}-{{day}}-{{slug}}
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Description", name: "description", widget: "text"}
-      - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Tags", name: "tags", widget: "list"}
-  - name: "katter_till_salu"
-    label: "Katter Till Salu"
-    folder: "src/pages/katter_till_salu"
+      - {label: Template Key, name: templateKey, widget: hidden, default: blog-post}
+      - {label: Title, name: title, widget: string}
+      - {label: Publish Date, name: date, widget: datetime}
+      - {label: Description, name: description, widget: text}
+      - {label: Body, name: body, widget: markdown}
+      - {label: Tags, name: tags, widget: list}
+  - name: katter_till_salu
+    label: Katter Till Salu
+    folder: src/pages/katter_till_salu
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: {{year}}-{{month}}-{{day}}-{{slug}}
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "katter-till-salu"}
-      - {label: "Titel", name: "title", widget: "string"}
-      - {label: "Förälder", name: "parents", widget: "string"}
-      - {label: "Förväntad", name: "expected", widget: "boolean", default: "true"}
-      - {label: "Födda", name: "date", widget: "datetime"}
-      - {label: "Beskrivning", name: "description", widget: "text"}
-      - label: "Bilder"
-        name: "katter-till-salu-bilder"
-        widget: "list"
-        field: {label: "Bild", name: "image", widget: "image"}
-      - label: "Uppfödare"
-        name: "breeder"
-        widget: "object"
+      - {label: Template Key, name: templateKey, widget: hidden, default: katter-till-salu}
+      - {label: Titel, name: title, widget: string}
+      - {label: Förälder, name: parents, widget: string}
+      - {label: Förväntad, name: expected, widget: boolean, default: true}
+      - {label: Födda, name: date, widget: datetime}
+      - {label: Beskrivning, name: description, widget: text}
+      - label: Bilder
+        name: katter-till-salu-bilder
+        widget: list
+        field: {label: Bild, name: image, widget: image, media_library: { output_filename_only: true }}
+      - label: Uppfödare
+        name: breeder
+        widget: object
         fields:
-          - {label: "Namn", name: "name", widget: "string"}
-          - {label: "Telefon", name: "phone", widget: "string"}
-          - {label: "Epost", name: "email", widget: "string"}
-          - {label: "Hemsida", name: "homepage", widget: "string"}
-  - name: "pages"
-    label: "Pages"
+          - {label: Namn, name: name, widget: string}
+          - {label: Telefon, name: phone, widget: string}
+          - {label: Epost, name: email, widget: string}
+          - {label: Hemsida, name: homepage, widget: string}
+  - name: pages
+    label: Pages
     files:
-      - file: "src/pages/home/index.md"
-        label: "Européringen"
-        name: "index"
+      - file: src/pages/home/index.md
+        label: Européringen
+        name: index
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Image", name: "image", widget: "image"}
-          - {label: "Body", name: "body", widget: "markdown"}
-      - file: "src/pages/about/index.md"
-        label: "Om Européringen"
-        name: "about"
+          - {label: Template Key, name: templateKey, widget: hidden, default: index-page}
+          - {label: Title, name: title, widget: string}
+          - {label: Image, name: image, widget: image}
+          - {label: Body, name: body, widget: markdown}
+      - file: src/pages/about/index.md
+        label: Om Européringen
+        name: about
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Body", name: "body", widget: "markdown"}
-      - file: "src/pages/products/index.md"
-        label: "Products"
-        name: "products"
+          - {label: Template Key, name: templateKey, widget: hidden, default: about-page}
+          - {label: Title, name: title, widget: string}
+          - {label: Body, name: body, widget: markdown}
+      - file: src/pages/products/index.md
+        label: Products
+        name: products
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "products-page"}
+          - {label: Template Key, name: templateKey, widget: hidden, default: products-page}
           - {label: Title, name: title, widget: string}
           - {label: Image, name: image, widget: image}
           - {label: Heading, name: heading, widget: string}
