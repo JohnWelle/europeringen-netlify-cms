@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-import { graphql, Link } from 'gatsby'
+import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 
 export const KatterTillSaluTemplate = ({
@@ -13,16 +13,6 @@ export const KatterTillSaluTemplate = ({
   tillSaluBilder,
   breeder,
 }) => {
-  global.console.log(
-    description,
-    title,
-    helmet,
-    expected,
-    parents,
-    tillSaluBilder,
-    breeder
-  )
-
   return (
     <section className="section">
       {helmet || ''}

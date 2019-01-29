@@ -13,17 +13,22 @@ export default class IndexPage extends React.Component {
     const { allMarkdownRemark, markdownRemark } = data
     const { image } = markdownRemark.frontmatter
 
-    const catsForSale = allMarkdownRemark.edges.map(
-      item => item.node.frontmatter
-    )
+    const imgParts = image.split('/')
+    const img = imgParts.pop()
+    const version = imgParts.pop()
+    const imgUrl = `https://res.cloudinary.com/dh0fuolka/image/upload/w_auto:breakpoints/${version}/${img}`
+    // const imgUrl = `https://res.cloudinary.com/dh0fuolka/image/upload/w_1024/${version}/${img}`
 
-    global.console.log(catsForSale)
+    const catsForSale = allMarkdownRemark.edges.map(item => ({
+      ...item.node.frontmatter,
+      slug: item.node.fields.slug,
+    }))
 
     return (
       <Layout>
         <section
           className="hero main-hero is-medium"
-          style={{ backgroundImage: `url(${image})` }}
+          style={{ backgroundImage: `url(${imgUrl})` }}
         >
           <div className="hero-body">
             <div className="field has-addons main-cta">
@@ -94,11 +99,12 @@ export const pageQuery = graphql`
       edges {
         node {
           id
+          fields {
+            slug
+          }
           frontmatter {
-            date(
-              formatString: "DD:[e] MMM"
-              locale: "sv-SE"
-            )
+            templateKey
+            date(formatString: "DD:[e] MMM", locale: "sv-SE")
             title
             expected
             parents

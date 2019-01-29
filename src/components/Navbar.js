@@ -98,7 +98,7 @@ const Navbar = class extends React.Component {
                 Om Européringen
               </Link>
               <div className="navbar-item has-dropdown is-hoverable">
-                <Link to="/" className="navbar-link">
+                <Link to="/" className="navbar-link is-arrowless">
                   Uppfödning
                 </Link>
                 <div className="navbar-dropdown">
