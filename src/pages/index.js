@@ -95,7 +95,10 @@ export const pageQuery = graphql`
         node {
           id
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")
+            date(
+              formatString: "DD:[e] MMM"
+              locale: "sv-SE"
+            )
             title
             expected
             parents

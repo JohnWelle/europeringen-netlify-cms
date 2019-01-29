@@ -151,11 +151,30 @@ body
   font-size: 2em
   margin: 20px
 
-.card-image-wrapper
-  width: 100%
-  height: 175px
-  background-size: cover
-  background-position-y: center
+.card
+  .card-image-wrapper
+    width: 100%
+    height: 175px
+    background-size: cover
+    background-position-y: center
+  .card-footer
+    display: flex
+    justify-content: space-evenly
+    align-content: center
+    margin-bottom: -10px
+    > div
+      color: #777777
+      font-size: .8em
+      display: flex
+      flex-direction: column
+      align-items: center
+      margin-top: 4px
+      svg, span
+        display: block
+        padding: 2px
+      svg
+        width: 20px
+        height: 20px
 
 .content .taglist
   list-style: none

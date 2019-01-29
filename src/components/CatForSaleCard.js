@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { FaCheck } from 'react-icons/fa'
+import { FiClock, FiCheck, FiX } from 'react-icons/fi'
 
 const CatForSaleCard = ({
   date,
@@ -35,12 +35,18 @@ const CatForSaleCard = ({
       <div className="content">
         <p>{parents}</p>
         <p>{description}</p>
-        <p>
-          Förväntad kull?
-          {expected ? <FaCheck /> : null}
-        </p>
         <br />
-        <time datetime={date}>{date}</time>
+        <footer class="card-footer">
+          <div>
+            {expected ? <FiX /> : <FiCheck />}
+            <span>Födda?</span>
+          </div>
+          <div>
+            <FiClock />
+            <span>{date}</span>
+          </div>
+        </footer>
+
       </div>
     </div>
   </div>
