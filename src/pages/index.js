@@ -94,7 +94,9 @@ export const pageQuery = graphql`
     allMarkdownRemark(
       limit: 3
       sort: { order: DESC, fields: [frontmatter___date] }
-      filter: { frontmatter: { templateKey: { eq: "katter-till-salu" } } }
+      filter: {
+        frontmatter: { templateKey: { eq: "katter-till-salu-entity" } }
+      }
     ) {
       edges {
         node {

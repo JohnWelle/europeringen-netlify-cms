@@ -33,6 +33,12 @@ const Navbar = class extends React.Component {
       : { className: 'navbar-item' }
   }
 
+  isPartiallyActive = ({ isPartiallyCurrent }) => {
+    return isPartiallyCurrent
+      ? { className: 'navbar-item is-active' }
+      : { className: 'navbar-item' }
+  }
+
   render() {
     return (
       <div className="navbar-wrapper">
@@ -97,8 +103,14 @@ const Navbar = class extends React.Component {
               <Link to="/about" getProps={this.isActive}>
                 Om Européringen
               </Link>
-              <div className="navbar-item has-dropdown is-hoverable">
-                <Link to="/" className="navbar-link is-arrowless">
+              <div
+                className="navbar-item has-dropdown is-hoverable"
+                getProps={this.isPartiallyActive}
+              >
+                <Link
+                  to="/katter_till_salu"
+                  className="navbar-link is-arrowless"
+                >
                   Uppfödning
                 </Link>
                 <div className="navbar-dropdown">
@@ -108,7 +120,11 @@ const Navbar = class extends React.Component {
                   <Link to="/" className="navbar-item">
                     Avelshanar
                   </Link>
-                  <Link to="/" className="navbar-item">
+                  <Link
+                    to="/katter_till_salu"
+                    className="navbar-item"
+                    getProps={this.isActive}
+                  >
                     Till salu
                   </Link>
                   <hr className="navbar-divider" />
